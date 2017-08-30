@@ -20,7 +20,7 @@ public class InputCollector {
 	void collectInput() throws IOException {
 
 		Scanner sc = new Scanner(System.in);
-		FileWriter file = new FileWriter("MathematiciansLogBook.txt");
+		FileWriter file = new FileWriter("MathematiciansLogBook.txt", true);
 		
 
 		System.out.println("Please Enter Which of the following you would like to do");
@@ -104,6 +104,7 @@ public class InputCollector {
 
 		
 		System.gc(); 
+		sc.close(); 
 		file.close(); 
 		
 	}

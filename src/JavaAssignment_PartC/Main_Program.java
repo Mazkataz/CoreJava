@@ -13,6 +13,7 @@ class Number_Program extends Thread{
 	this.end = en;
 	this.numberType = numberTyp;
 	
+	//initialize empty arrayList with null values 
 	numberList = new ArrayList<Integer>(); 
 }
 	@Override
@@ -20,10 +21,13 @@ class Number_Program extends Thread{
 		if(this.numberType == "ODD")
 		for(int x=this.start;x<this.end; x++)
 		{
+			//add to list if number is odd
 			if(x%2==1) numberList.add(x);
 		}
 		
 		else if(this.numberType == "EVEN")
+			//add to list if number is even
+
 			for(int x=this.start;x<this.end; x++)
 			{
 				if(x%2==0) numberList.add(x);
