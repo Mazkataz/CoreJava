@@ -5,16 +5,19 @@ import java.util.Date;
 
 public class Subtractor extends Mathematician {
 
-	Subtractor(int num_1, int num_2, long timeRequested) {
+	Subtractor(int num_1, int num_2, long timeRequeste) {
 		this.num1 = num_1;
 		this.num2 = num_2;
+		this.timeRequested= new Date(timeRequeste);
 
 	}
 
-	public Subtractor(int num_1, int num_2, int num_3, long timeRequested) {
+	public Subtractor(int num_1, int num_2, int num_3, long timeRequeste) {
 		this.num1 = num_1;
 		this.num2 = num_2;
 		this.num3 = num_3;
+		this.timeRequested= new Date(timeRequeste);
+
 	}
 
 	@Override

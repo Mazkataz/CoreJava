@@ -1,63 +1,62 @@
 package JavaAssignment_PartD;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Multiplier extends Mathematician {
 
-	public Multiplier(int num_1, int num_2, long timeRequested) {
+	public Multiplier(int num_1, int num_2, long timeRequeste) {
 
 	this.num1 = num_1;
-	this.num2 = num_2; 
+	this.num2 = num_2;
+	this.timeRequested= new Date(timeRequeste);
+
 	
 	}
 
-	Multiplier(int num_1, int num_2, int num_3, long timeRequested) {
+	Multiplier(int num_1, int num_2, int num_3, long timeRequeste) {
 		this.num1 = num_1;
 		this.num2 = num_2;
 		this.num3 = num_3;
+		this.timeRequested= new Date(timeRequeste);
+
 	}
 
 	@Override
-	public int multiply(int x, int y) {
+	public void multiply(int x, int y) {
 	
 		
 		this.result = this.num1 * this.num2; 
 		
-		this.responseTime = (int)(Calendar.getInstance().get(Calendar.MILLISECOND) - timeRequested) ;
+		this.responseTime = new Date().getSeconds() - timeRequested.getSeconds();
+		print(result, responseTime);		
 		
 		
-		
-		
-		return 0;
-	}
+		}
 
-	public int multiply(int x, int y, int z){
+	public void multiply(int x, int y, int z){
 		this.result = this.num1*this.num2*this.num3; 
 		
-		this.responseTime = (int)(Calendar.getInstance().get(Calendar.MILLISECOND) - timeRequested) ;
-
-		return 0;
+		this.responseTime = new Date().getSeconds() - timeRequested.getSeconds();
+		print(result, responseTime);
 	}
 
 
 	@Override
-	public int add(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void add(int x, int y) {
+		
 	}
 
 
 
 	@Override
-	public int divide(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void divide(int x, int y) {
+		
 	}
 
 	@Override
-	public int subtract(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void subtract(int x, int y) {
+		
 	}
 
 

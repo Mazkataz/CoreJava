@@ -86,6 +86,8 @@ public class InputCollector {
 
 		} // end switch case.
 
+		file.write(Calendar.getInstance().getTime().toString());
+
 		
 		System.gc(); 
 		file.close(); 

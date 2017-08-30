@@ -27,9 +27,9 @@ public abstract class Mathematician {
 		System.out.println("The answer to your inquiry is " + result);
 		System.out.println("Response time: "  + time + " seconds.");
 	}
-	public int subtract() {
+	public void subtract() {
 		// TODO Auto-generated method stub
-		return 0;
+		
 	}
 	
 	

@@ -1,6 +1,7 @@
 package JavaAssignment_PartD;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Adder extends Mathematician {
 
@@ -8,51 +9,46 @@ public class Adder extends Mathematician {
 		this.num1 = num_1;
 		this.num2 = num_2;
 
-		 timeRequested = timeRequeste;
+		this.timeRequested= new Date(timeRequeste);
 	}
 
 	Adder(int num_1, int num_2, int num_3, long timeRequeste) {
 		this.num1 = num_1;
 		this.num2 = num_2;
 		this.num3 = num_3;
-		 timeRequested = timeRequeste;
+		this.timeRequested= new Date(timeRequeste);
 	}
 
 	@Override
-	public int add(int x, int y) {
+	public void add(int x, int y) {
 
 		this.result = this.num1 + this.num2; 
 		
-		 this.responseTime = (int) (timeRequested - Calendar.getInstance().get(Calendar.MILLISECOND));
+		 this.responseTime = (int) (Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
 
-		return 0;
 	}
 	
-	public int add(int x, int y, int z) {
+	public void add(int x, int y, int z) {
 
 		this.result = this.num1 + this.num2+this.num3; 
 		
-		 this.responseTime = (int) (timeRequested - Calendar.getInstance().get(Calendar.MILLISECOND));
+		 this.responseTime = (int) (Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
 
-		return 0;
 	}
 
 	@Override
-	public int multiply(int x, int y) {
+	public void multiply(int x, int y) {
 		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	@Override
-	public int divide(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void divide(int x, int y) {
+		
 	}
 
 	@Override
-	public int subtract(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void subtract(int x, int y) {
+		
 	}
 
 
