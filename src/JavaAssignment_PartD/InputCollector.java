@@ -29,7 +29,8 @@ public class InputCollector {
 		System.out.println("3.Multiply");
 		System.out.println("4. Divide");
 		int input = sc.nextInt();
-
+		
+		System.out.println("please enter two integers");
 		this.num1 = sc.nextInt();
 		this.num2 = sc.nextInt();
 
@@ -47,30 +48,42 @@ public class InputCollector {
 			if (optionThird == 1) {
 				Adder ad = new Adder(num1, num2, timeRequested);
 				ad.add(num1,num2);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			} else if (optionThird == 2) {
 				Adder ad = new Adder(num1, num2, num3, timeRequested);
 				ad.add(num1, num2, num3);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			}
 		case 2: //Subtract.
 			if (optionThird == 1) {
 				Subtractor subtr = new Subtractor(num1, num2, num3, timeRequested);
 				subtr.subtract(num1, num2, num3);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			} else if (optionThird == 2) {
 				Subtractor subtr = new Subtractor(num1, num2, timeRequested);
 				subtr.subtract(num1,num2);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			}
 		case 3: //Multiply.
 			if (optionThird == 1) {
 				Multiplier multi = new Multiplier(num1, num2, num3, timeRequested);
 				multi.multiply(num1, num2, num3);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			} else if (optionThird == 2) {
 				Multiplier multi= new Multiplier(num1, num2, timeRequested);
 				multi.multiply(num1, num2);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			}
 		case 4: // Divide. 
@@ -81,12 +94,13 @@ public class InputCollector {
 			} else if (optionThird == 2) {
 				Divider divid= new Divider(num1, num2, timeRequested);
 				divid.divide(num1, num2);
+				file.write(Calendar.getInstance().getTime().toString());
+
 				break;
 			}
 
 		} // end switch case.
 
-		file.write(Calendar.getInstance().getTime().toString());
 
 		
 		System.gc(); 
