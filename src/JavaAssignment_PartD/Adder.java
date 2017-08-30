@@ -33,6 +33,7 @@ public class Adder extends Mathematician {
 
 		this.result = this.num1 + this.num2+this.num3; 
 		
+		//subtract responseTime from current time and then print it 
 		 this.responseTime = (int)(Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
 		 print(result,responseTime); 
 
@@ -40,7 +41,6 @@ public class Adder extends Mathematician {
 
 	@Override
 	public void multiply(int x, int y) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override

@@ -29,17 +29,17 @@ public class StringMethods {
 			//Iterate through each character and increment/decrement horizontal/vertical values
 			switch (directions.charAt(i)) {
 
-			case 'U':
+			case 'U': case 'u': 
 				v++;
 				break;
-			case 'R':
+			case 'R': case 'r':
 				h++;
 				break;
-			case 'L':
-				v--;
-				break;
-			case 'D':
+			case 'L': case 'l':
 				h--;
+				break;
+			case 'D': case 'd': 
+				v--;
 				break;
 			default:
 				System.out.println(directions.charAt(i) + " was ignored ");
@@ -47,6 +47,14 @@ public class StringMethods {
 
 		}
 		System.out.println(h + " " + v);
-	}
-	  } //end of else statement
+	} //end of else statement
+		
+		
+		br.close(); 
+		file.close(); 
+		
+		
+	  } 
+	
+
 }
