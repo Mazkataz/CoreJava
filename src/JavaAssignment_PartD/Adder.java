@@ -29,7 +29,7 @@ public class Adder extends Mathematician {
 		 print(result,responseTime); 
 	}
 	
-	public void add(int x, int y, int z) {
+	public void add(int num1, int num2, int num3) {
 
 		this.result = this.num1 + this.num2+this.num3; 
 		

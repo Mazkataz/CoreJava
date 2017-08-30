@@ -46,14 +46,14 @@ public class InputCollector {
 
 		case 1: //Add.
 			if (optionThird == 1) {
-				Adder ad = new Adder(num1, num2, timeRequested);
-				ad.add(num1,num2);
+				Adder ad = new Adder(num1, num2, num3, timeRequested);
+				ad.add(num1,num2, num3);
 				file.write(Calendar.getInstance().getTime().toString());
 
 				break;
 			} else if (optionThird == 2) {
-				Adder ad = new Adder(num1, num2, num3, timeRequested);
-				ad.add(num1, num2, num3);
+				Adder ad = new Adder(num1, num2, timeRequested);
+				ad.add(num1, num2);
 				file.write(Calendar.getInstance().getTime().toString());
 
 				break;
