@@ -26,13 +26,15 @@ public class Adder extends Mathematician {
 		
 		 this.responseTime = (int) (Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
 
+		 print(result,responseTime); 
 	}
 	
 	public void add(int x, int y, int z) {
 
 		this.result = this.num1 + this.num2+this.num3; 
 		
-		 this.responseTime = (int) (Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
+		 this.responseTime = (int)(Calendar.getInstance().get(Calendar.SECOND)-timeRequested.getSeconds() );
+		 print(result,responseTime); 
 
 	}
 
